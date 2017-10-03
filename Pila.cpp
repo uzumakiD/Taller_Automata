@@ -2,10 +2,14 @@
 #include <iostream>
 using namespace std;
 
-using namespace std;
 
 Pila::Pila()
-{              cima = -1;
+{              cima = 0;
+                pila[0]=PILAVACIA;
+}
+
+int Pila :: getCima(){
+    return cima;
 }
 
 bool Pila :: Apilar(char elemento)
@@ -28,7 +32,7 @@ return res;
 bool Pila::Desapilar()
 {
 bool res;
-if(cima == -1)
+if(cima == 0)
 {   cerr << "Se esta intentando quitar un elemento de una pila vacia (underflow)" << endl;
   res=false;
 }else
@@ -69,10 +73,26 @@ return res;
 
 bool Pila::PilaVacia()
 {
-return cima == -1;
+return cima == 0;
 }
 
 void Pila::LimpiarPila()
 {
-cima = -1;
+cima = 0;
 }
+
+bool Pila :: pilaEstaVacia(){
+    if (pila[0]==PILAVACIA){
+        return true;
+    }
+
+    return false;
+}
+
+
+
+
+
+
+
+

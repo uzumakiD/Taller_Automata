@@ -1,11 +1,13 @@
 #ifndef _PILA_H
 #define _PILA_H
 
+
 class Pila
 {
    private:
            static const int MAX = 100;
-           typedef int TipoDato;
+           static const int PILAVACIA = '#';
+           typedef char TipoDato;
            TipoDato pila[MAX];
            int cima;
 
@@ -17,6 +19,9 @@ class Pila
           void LimpiarPila();
           void VerPila();
           bool PilaVacia();
+          int getCima();
+          void setCima();
+          bool pilaEstaVacia();
 
 };
 
