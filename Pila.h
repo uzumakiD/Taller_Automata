@@ -2,28 +2,21 @@
 #define _PILA_H
 
 
-class Pila
-{
-   private:
-           static const int MAX = 100;
-           static const int PILAVACIA = '#';
-           typedef char TipoDato;
-           TipoDato pila[MAX];
-           int cima;
-
-   public:
-          Pila();
-          bool Apilar(char elemento);
-          bool Desapilar();
-          bool CimaPila(char elemento);
-          void LimpiarPila();
-          void VerPila();
-          bool PilaVacia();
-          int getCima();
-          void setCima();
-          bool pilaEstaVacia();
-
+class Pila {
+ char vector[50];
+  // indicePila:  -1 -> pila vacia     0 -> posicion del dato
+int indicePila;
+public:
+ Pila() {   indicePila = -1; }; // constructor
+  // funciones analizadoras
+ void mostrarDatos();
+ int cuantosDatos();
+  // funciones modificadoras
+ void entrarDato(char dato);
+ char sacarDato();
+ char mostrarTope();
 };
+
 
 
 #endif // PILA_H
