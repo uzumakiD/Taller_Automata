@@ -17,6 +17,9 @@ char Pila::mostrarTope() {
 int Pila::cuantosDatos() {
  return indicePila + 1;
 }
+void Pila::limpiarPila() {
+ indicePila=0;
+}
 
 void Pila::entrarDato(char dato) {
  if (indicePila < 49) {

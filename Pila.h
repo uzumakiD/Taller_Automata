@@ -15,6 +15,7 @@ public:
  void entrarDato(char dato);
  char sacarDato();
  char mostrarTope();
+ void limpiarPila();
 };
 
 
